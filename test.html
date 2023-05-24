@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+      #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #000;
+        z-index: 9999;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      #progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 20px;
+        width: 0;
+        background-color: #f00;
+      }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div id="progress"></div>
+    </div>
+
+    <script>
+      window.onload = function() {
+          simulateProgress();
+      }
+
+      function simulateProgress() {
+          const progress = document.getElementById('progress');
+          let width = 0;
+          let interval = setInterval(frame, 80);
+          function frame() {
+              if (width >= 100) {
+                  clearInterval(interval);
+                  // When loading complete, split the screen
+                  document.getElementById('preloader').style.transform = "translateY(-100%)";
+              } else {
+                  width++;
+                  progress.style.width = width + '%';
+              }
+          }
+      }
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Web Development Services</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/matrix.css">
+</head>
+<body class="light">
+<div id="preloader">
+  <div id="preloader-top" class="preloader-half"></div>
+  <div id="preloader-bottom" class="preloader-half"></div>
+  <div id="loading-logo-container">
+    <svg id="ethereum-logo" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="100%" height="100%" version="1.1" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 784.37 1277.39" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+      <g id="Layer_x0020_1">
+        <metadata id="CorelCorpID_0Corel-Layer"/>
+        <g id="_1421394342400">
+          <g>
+            <polygon class="eth-logo-part" fill="#343434" fill-rule="nonzero" points="392.07,0 383.5,29.11 383.5,873.74 392.07,882.29 784.13,650.54 "/>
+            <polygon class="eth-logo-part" fill="#8C8C8C" fill-rule="nonzero" points="392.07,0 -0,650.54 392.07,882.29 392.07,472.33 "/>
+            <polygon class="eth-logo-part" fill="#3C3C3B" fill-rule="nonzero" points="392.07,956.52 387.24,962.41 387.24,1263.28 392.07,1277.38 784.37,724.89 "/>
+            <polygon class="eth-logo-part" fill="#8C8C8C" fill-rule="nonzero" points="392.07,1277.38 392.07,956.52 -0,724.89 "/>
+            <polygon class="eth-logo-part" fill="#141414" fill-rule="nonzero" points="392.07,882.29 784.13,650.54 392.07,472.33 "/>
+            <polygon class="eth-logo-part" fill="#393939" fill-rule="nonzero" points="0,650.54 392.07,882.29 392.07,472.33 "/>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</div>
+
+  <canvas id="matrix-canvas"></canvas>
+  <header></header>
+  <main>
+        <div class="center-content">
+        <div id="theme-switch" class="btn-switch">
+            <div id="toggleBtn">
+  <i id="toggleIcon" class="fas fa-solid fa-rotate"></i>
+</div>
+            </div>
+            <div class="text-container animated-text">
+    <span id="animated-span" class="hidden"></span>
+</div>
+    <div class="content-container">
+    <div class="card">
+  <div class="card__face card__face--front">
+    <img id="main-image" class="pfp" src="img/pfp.jpeg" alt="Your Image" />
+  </div>
+  <div class="card__face card__face--back">
+    <img id="back-image" class="pfp" src="img/pfp-2.jpeg" alt="Your Image" />
+  </div>
+</div>
+</div>
+            
+
+            <div id="social-media-icons">
+                <a href="your-instagram-url"><i class="fab fa-instagram"></i></a>
+                <a href="your-twitter-url"><i class="fab fa-twitter"></i></a>
+                <a href="your-facebook-url"><i class="fab fa-discord"></i></a>
+            </div>
+            <button id="subscribe-button" class="btn">PRE-REGISTER</button>
+
+        </div>
+    </main>
+    <footer>
+    <p id="copyright">&copy; 2023 MEMBERSCLUB.IO</p>
+  </footer>
+  <div id="subscribe-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h2>STAY AHEAD OF LAUNCH</h2>
+    <div class="message-box"></div>
+    <form id="subscribe-form" action="subscribe.php" method="post">
+  <input type="email" id="email" name="email" placeholder="Your email address" required>
+  <input type="submit" value="Subscribe">
+</form>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('preloader').style.display = 'none';
+  }, 3000); // wait for 3 seconds
+});
+
+</script>
+  <script src="js/main.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/matrix.js"></script>
+</body>
+</html>
